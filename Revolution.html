@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title> CHESS² </title>
+
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1{
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px; /* Increased font size */
+            font-weight: bold;
+            letter-spacing: 3px; /* Adjust letter spacing */
+            text-transform: uppercase; /* Make the title uppercase */
+            color: #f2a365; /* A contrasting color to make it stand out */
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+            margin-left: 10px; /* Adjust for spacing */
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;  
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a {
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        /* Optional: Add gradient background around the logo container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 390px;
+            border-radius: 10px; /* Round the edges of the logo container */
+        }
+
+        .logo {
+            height: 50px;  /* Adjust logo height */
+            margin-right: 10px;
+            border-radius: 50%; /* Make the logo circular if it's square */
+            border: 3px solid #f2a365; /* Add a border around the logo */
+            padding: 5px; /* Space between logo and border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        }
+
+        .logo:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px; /* Adjusted font size for top-level menu items */
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;  
+            position: absolute;
+            top: 100%;  
+            left: 0;
+            background-color: #1e4d5a; 
+            width: 250px; /* Increased width */
+            border: 1px solid #000000;
+            padding: 15px 0; /* Increased padding for larger dropdown */
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px; /* Increased padding for list items */
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px; /* Increased font size for dropdown links */
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html"> Origin </a></li>
+                        <li> <a href="Renowned-figures.html"> Renowned Chess Figures </a></li>
+                        <li> <a href="Revolution.html"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Rules.html"> RULES ♗ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Rules.html"> Board Anatomy </a></li>
+                        <li> <a href="Rules.html"> Moving Pieces </a></li>
+                        <li> <a href="Rules.html"> How to Win/ Additional Rules </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Tactics.html"> TACTICS ♘ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Tactics.html"> Openings </a></li>
+                        <li> <a href="Tactics.html"> Middle Game </a></li>
+                        <li> <a href="Tactics.html"> End Game </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Popularity.html"> POPULARITY ♙ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Popularity.html"> World Impact </a></li>
+                        <li> <a href="Popularity.html"> Popular Media </a></li>
+                        <li> <a href="Popularity.html"> Competitive Chess </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+   <br>	
+    <style>
+    .body {
+      font-family: Arial, sans-serif;
+      background-color: #1e2a38;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+  
+    }
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 38px;
+      margin-right: 111px;
+      margin-left: 111px;
+      margin-bottom: -20px;
+
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 0;
+      margin-bottom: 0;
+	
+    }
+
+    .subtitle {
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: center;
+      margin-right: 111px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Technological Evolution of Chess</div>
+    <div class="description">
+Technology has completely changed the way chess is played and enjoyed, moving it from traditional board games to a global, digital experience. Tools like online platforms, chess engines, and AI have made it easier for players to compete, improve, and study the game, no matter their skill level. These advancements have opened up chess to millions of people worldwide, helping players learn and explore strategies like never before. Technology has also made chess more exciting for spectators, with live game analysis, interactive visuals, and expert commentary bringing matches to life. It’s a perfect blend of tradition and innovation, making chess more accessible and engaging for everyone.
+
+    </div>
+<br>
+    <div class="content">
+      <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpGpMQT9.png" alt="crypto" style="width: 67%; height: 80%; object-fit: cover; border-radius: 0px; margin-left: 128px; margin-top: 50px; margin-bottom: -150px;">
+      <div class="subtitle">
+<br>
+        <strong>Chess Engines</strong><br>
+       Chess engines like Stockfish and AlphaZero have completely changed how players study and prepare for games. These programs use advanced algorithms to analyze millions of positions in seconds, providing insights that even top players rely on. AlphaZero, created by DeepMind, took things to the next level by teaching itself chess through machine learning. It introduced creative strategies and playing styles that have transformed how people understand the game.
+</div>
+       <div class="content">
+      <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/NathanielGreen/phpoO7vGn.png" alt="crypto" style="width: 134%; height: 60%; object-fit: cover; border-radius: 10px;   margin-bottom: 5px; margin-left: 128px;">
+</div>
+      <div class="subtitle">
+        <strong>Online Chess Platforms</strong><br>
+       Online platforms like Chess.com, Lichess, and Playchess have made chess accessible to anyone with an internet connection. These sites offer a wide range of features, including real-time matches, tournaments, training exercises, and fun puzzles. Players from all over the world can compete, no matter their skill level, making chess more inclusive and helping to build a vibrant online chess community.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 CHESS². All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHESS²</title>
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1 {
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+            margin-left: 10px;
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a { 
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 385px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 3px solid #f2a365;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #f76b00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1e4d5a;
+            width: 250px;
+            border: 1px solid #000000;
+            padding: 15px 0;
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px;
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px;
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        /* Main section styling for horizontal layout with equal sized containers */
+        .main-section {
+            display: flex;
+            flex-direction: row; /* Change to row layout for horizontal display */
+            justify-content: space-evenly; /* Distribute the containers evenly */
+            align-items: stretch; /* Ensure the containers stretch to the same height */
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            width: 20%; /* Ensure all containers take up equal width */
+            background-color: #1e4d5a;
+            padding: 20px;
+            margin: 0 15px; /* Space between images */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute content within the container */
+        }
+
+        .image-container img {
+            width: 100%; /* Make images take up 100% of container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            border: 3px solid #f2a365;
+        }
+
+        .image-container h3 {
+            font-size: 20px;
+            color: #f2a365;
+            margin-top: 10px;
+        }
+
+        .image-container p {
+            color: #c9e8e1;
+            font-size: 12px;
+            margin: none;
+            
+        }
+
+        .image-container a {
+            color: #c9e8e1;
+            text-decoration: none;
+            
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html"> Origin </a></li>
+                        <li> <a href="Renowned-figures.html"> Renowned Chess Figures </a></li>
+                        <li> <a href="Revolution.html"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Rules.html">RULES ♗ ⬇</a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="Rules.html">Board Anatomy</a></li>
+                        <li><a href="Rules.html">Moving Pieces</a></li>
+                        <li><a href="Rules.html">How to Win/Additional Rules</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Tactics.html">TACTICS ♘ ⬇</a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="Tactics.html">Openings</a></li>
+                        <li><a href="Tactics.html">End Game</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Popularity.html">POPULARITY ♙ ⬇</a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="Popularity.html">World Impact</a></li>
+                        <li><a href="Popularity.html">Popular Media</a></li>
+                        <li><a href="Popularity.html">Competitive Chess</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-section">
+        <!-- First image placeholder -->
+        <div class="image-container">
+            <img src="https://logowik.com/content/uploads/images/513_email.jpg" alt="Placeholder 1">
+            <h3>SCHOOL EMAIL</h3>
+            <p> • 2024-2-01224@lpunetwork.edu.ph </p>
+            <p> • 2024-2-00770@lpunetwork.edu.ph </p>
+            <p> • 2024-2-00056@lpunetwork.edu.ph </p>
+            <p> • 2024-2-00175@lpunetwork.edu.ph</p>
+            <p> • 2024-2-01000@lpunetwork.edu.ph</p>
+        </div>
+
+        <!-- Second image placeholder -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/3d/3f/d0/3d3fd046ee5e4398316f922810dbfedb.jpg" alt="Placeholder 2">
+            <h3>SOCIAL</h3>
+            <p> <a href="https://www.facebook.com/cedric.perez.963"> • https://www.facebook.com/cedric.perez.963 </a> </p>
+            <p> <a href="https://www.facebook.com/eljhrss"> • https://www.facebook.com/eljhrss </a> </p>
+            <p> <a href="https://www.facebook.com/mathew.mcdonnell.56">• https://www.facebook.com/mathew.mcdonnell.56 </a> </p>
+            <p> <a href="https://www.facebook.com/johnjaderic.monzon">• https://www.facebook.com/johnjaderic.monzon </a> </p>
+            <p> <a href="https://www.facebook.com/MARKDANTAMPARONG">• https://www.facebook.com/MARKDANTAMPARONG </a> </p>
+        </div>
+
+        <!-- Third image placeholder -->
+        <div class="image-container">
+            <img src="https://t4.ftcdn.net/jpg/02/98/28/57/360_F_298285715_ct4qtZOJH119A39TdMrbkLsfziVCX1Rz.jpg" alt="Placeholder 3">
+            <h3> SCHOOL ADDRESS</h3>
+            <p>• 7WR8+F62, Governor's Dr, General Trias, Cavite.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CHESS². All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
