@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHESS²</title>
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1{
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+            margin-left: 10px;
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;  
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a { 
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 385px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 3px solid #f2a365;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1e4d5a;
+            width: 250px;
+            border: 1px solid #000000;
+            padding: 15px 0;
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px;
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px;
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        /* Styling for the main content */
+        main {
+            display: flex;
+            justify-content: space-around; /* Space images evenly */
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            padding: 20px;
+            gap: 20px; /* Space between images */
+        }
+
+        main h4{
+            display: flex;
+            justify-content: space-around; /* Space images evenly */
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            padding: 20px;
+            gap: 20px; /* Space between images */
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container {
+            text-align: left;
+            width: 200px; /* Set width of each image container */
+        }
+
+        .image-container, b{
+            font-family: 'Century Gothic';
+            color:#f2a365;
+            text-shadow: 5px 5px 4px rgba(1, 1, 1, 1);
+        }
+
+        .image-container img {
+            width: 100%; /* Make the image fill its container */
+            height: 55%;
+            border-radius: 10px; /* Rounded corners for images */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            border: solid 2px;
+            border-color: #f2a365;
+        }
+
+        .image-container, p {
+            color: #c9e8e1;
+            font-size: 15px;
+            margin-top: 10px;
+            font-family: 'Century Gothic';
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            height: 4%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html#Origin-Chess"> Origin </a></li>
+                        <li> <a href="Origin.html#Renowned-Chess"> Renowned Chess Figures </a></li>
+                        <li> <a href="Origin.html#Technological-Chess"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Rules.html"> RULES ♗ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Rules.html#Board-section"> Board Anatomy </a></li>
+                        <li> <a href="Rules.html#Moving-section"> Moving Pieces </a></li>
+                        <li> <a href="Rules.html#Additional-section"> How to Win/ Additional Rules </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Tactics.html"> TACTICS ♘ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Tactics.html#Opening-section"> Openings </a></li>
+                        <li> <a href="Tactics.html#Endgame-section"> End Game </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Popularity.html"> POPULARITY ♙ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Popularity.html#World-Impact"> World Impact </a></li>
+                        <li> <a href="Popularity.html#Popular-Media"> Popular Media </a></li>
+                        <li> <a href="Popularity.html#Competitive-Chess"> Competitive Chess </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="image-container">
+            <img src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t1.6435-9/76191766_2619045321468074_7525638925797294080_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9AmU4Jk1xTUQ7kNvgGrxTmK&_nc_zt=23&_nc_ht=scontent.fmnl19-1.fna&_nc_gid=ArIDarwKTUQeU3uyXaw1cCe&oh=00_AYCxhgeSaDNXl8gQ8LHzT60e9c8l-q8Zp3fINmhf5VjTnQ&oe=677C99C1" alt="Picture 1">
+            <h4>MARK MARAVILLAS</h4>
+            <p><b>"P R O G R A M M E R"</b></p>
+            <p>"I am stronger than John Play with Elijah first"</p>
+            <p>"Welcome to CHESS².com" <br> "<b> I am Mark </b>."</p>
+        </div>
+        <div class="image-container">
+            <img src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t39.30808-6/448509467_1405554253489148_494017773890252382_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=zNCrGYuJ2RAQ7kNvgFabaMs&_nc_zt=23&_nc_ht=scontent.fmnl19-1.fna&_nc_gid=Agqlv5-FrTBWh3P5VKTi7ku&oh=00_AYApSmeACCcXiEO2l3Z2BDq8o3JqT8L6aSNlMLdjga4d4w&oe=675AFC09" alt="Picture 2">
+            <h4>ELIJAH KARINGAL</h4>
+            <p><b>"P R O G R A M M E R"</b></p>
+            <p>"I am stronger than Mark Play with Mathew first"</p>
+            <p>"Welcome to CHESS².com"  <br> "<b> I am Elijah </b>."</p>
+        </div>
+        <div class="image-container">
+            <img src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t39.30808-6/469473260_9209269052425705_812595757979289822_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=70FomwpXwqoQ7kNvgE0ntH8&_nc_zt=23&_nc_ht=scontent.fmnl19-1.fna&_nc_gid=AtaJG1Tqev5w4ZHsuznSlSC&oh=00_AYBJtNnKUAQdzSiKoTsU82QU3hldIS0jYbySf4sGK-Klug&oe=675B233A" alt="Picture 3">
+            <h4>MATHEW MCDONNELL</h4>
+            <p><b>"P R O G R A M M E R"</b></p>
+            <p>"I am stronger than Elijah Play with Cedric first"</p>
+            <p>"Welcome to CHESS².com"  <br> "<b> I am Mathew </b>."</p>
+        </div>
+        <div class="image-container">
+            <img src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t39.30808-1/399524987_1782548055516220_8149911210317724587_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=QuLNKyLxUcAQ7kNvgEMDqPs&_nc_zt=24&_nc_ht=scontent.fmnl19-1.fna&_nc_gid=AfNcdGA-RRjBNwH9KSBpy7r&oh=00_AYB7gK5Hw5EAloNUqJHmT5VLcHLY11IARUWXMM4M4rE9lQ&oe=675B2989" alt="Picture 4">
+            <h4>CEDRIC PEREZ</h4>
+            <p><b>"P R O G R A M M E R"</b></p>
+            <p>"I am Stronger than Mathew Play with John first"</p>
+            <p>"Welcome to CHESS².com" <br> "<b> I am Cedric</b>."</p>
+        </div>
+        <div class="image-container">
+            <img src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t39.30808-1/452226939_1466982570652264_128151051898621857_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=AAOGuJICjVoQ7kNvgEYNpiT&_nc_zt=24&_nc_ht=scontent.fmnl19-1.fna&_nc_gid=AU1wSNluNFrLMN7kTaY9nma&oh=00_AYArYTjrxh93HAnm2PaIB0k8z8rsqurfMWcwweSwfSIyxw&oe=675AFC52" alt="Picture 5">
+            <h4>JOHN JADERICCAÑAS</h4>
+            <p><b>"P R O G R A M M E R"</b></p>
+            <p>"I am stronger than Cedric Play with Mark first"</p>
+            <p>"Welcome to CHESS².com" <br> "<b> I am John Jaderic</b>." </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CHESS². All rights reserved.</p>
+    </footer>
+</body>
+</html>

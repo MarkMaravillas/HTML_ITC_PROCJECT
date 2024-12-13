@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title> CHESS² </title>
+
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1{
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px; /* Increased font size */
+            font-weight: bold;
+            letter-spacing: 3px; /* Adjust letter spacing */
+            text-transform: uppercase; /* Make the title uppercase */
+            color: #f2a365; /* A contrasting color to make it stand out */
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+            margin-left: 10px; /* Adjust for spacing */
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;  
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a {
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: 50px;  
+            margin-right: 10px;
+            border-radius: 50%; 
+            border: 3px solid #f2a365; 
+            padding: 5px; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        .logo:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;  
+            position: absolute;
+            top: 100%;  
+            left: 0;
+            background-color: #1e4d5a; 
+            width: 250px; 
+            border: 1px solid #000000;
+            padding: 15px 0; 
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px; 
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px;
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            height: 4%;
+            bottom: 0;
+        }
+
+        table tr td {
+            border-top: solid 3px;
+            border-top-width: 10px ;
+            border-color: #ff6f00;
+        }
+
+        body  {
+            color: #c9e8e1;
+        }
+
+        body b {
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html#Origin-Chess"> Origin </a></li>
+                        <li> <a href="Origin.html#Renowned-Chess"> Renowned Chess Figures </a></li>
+                        <li> <a href="Origin.html#Technological-Chess"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Rules.html"> RULES ♗ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Rules.html#Board-section"> Board Anatomy </a></li>
+                        <li> <a href="Rules.html#Moving-section"> Moving Pieces </a></li>
+                        <li> <a href="Rules.html#Additional-section"> How to Win/ Additional Rules </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Tactics.html"> TACTICS ♘ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Tactics.html#Opening-section"> Openings </a></li>
+                        <li> <a href="Tactics.html#Endgame-section"> End Game </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Popularity.html"> POPULARITY ♙ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Popularity.html#World-Impact"> World Impact </a></li>
+                        <li> <a href="Popularity.html#Popular-Media"> Popular Media </a></li>
+                        <li> <a href="Popularity.html#Competitive-Chess"> Competitive Chess </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <head>
+        <title>Popularity</title>
+    </head>
+    <body>
+    
+    <h1><center id="World-Impact">World Impact</h1><br></center>
+    <center><caption>Chess has impacted societies and cultures <b> worldwide </b> in many profound ways.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://miro.medium.com/v2/resize:fit:1400/1*67hkGMZ2GnH5Xb1Enmk0ng.jpeg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Chess as a Methaphor for Warfare</b></center>
+                <details>
+                    <p>Chess as a <b>  metaphor for warfare </b> in various societies. Throughout history, chess has been used to represent the strategies of war and statecraft, influencing military tactics and diplomacy.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://www.wilsoncenter.org/sites/default/files/styles/embed_text_block/public/media/uploads/images/Fischer%20and%20Karpov.png" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Chess During the Cold War</b></center>
+                <details>
+                    <p>The global spread of chess during the  <b> Cold War</b> as a form of intellectual competition between the United States and the Soviet Union.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <h1><center id="Popular-Media">Popular Media</h1><br></center>
+    <center><caption>The portrayal of chess in <b> films, TV shows, and media </b> has increased its visibility across the globe.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p18769662_b_v13_aa.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>TV Show: "The Queen's Gambit"</b></center>
+                <details>
+                    <p> Netflix's <b> "The Queen's Gambit" </b> which has brought chess to a new generation, increasing its popularity and participation.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://static.dw.com/image/61827327_606.webp" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Bobby Fischer vs Boris Spassky (1972) </b></center>
+                <details>
+                    <p>The <b> 1972 World Chess Championship </b> between Bobby Fischer and Boris Spassky, which was a highly televised event and became a symbol of the Cold War.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <h1><center id="Competitive-Chess"> Competitive Chess</h1><br></center>
+    <center><caption>Chess as a <b> competitive </b> sport continues to evolve with global tournaments and millions of participants.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpFwHdOP.jpeg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Chess World Championship</b></center>
+                <details>
+                    <p>The <b> Chess World Championship </b>, which has been the pinnacle of competitive chess for over a century, drawing competitors and fans worldwide.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR764kP-OCM_bBFuCV4YbuIXB2YpVtUnMfaxg&s" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Online Chess Platforms</b></center>
+                <details>
+                    <p>The rise of <b> online chess platforms </b> like <b>Chess.com and Lichess.com</b>, where players can compete globally, changing the competitive landscape.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    </body>
+
+    <footer>
+        <p>2024 Chess².com - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

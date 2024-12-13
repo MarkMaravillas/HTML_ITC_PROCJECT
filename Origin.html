@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title> CHESS² </title>
+
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1{
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px; /* Increased font size */
+            font-weight: bold;
+            letter-spacing: 3px; /* Adjust letter spacing */
+            text-transform: uppercase; /* Make the title uppercase */
+            color: #f2a365; /* A contrasting color to make it stand out */
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+            margin-left: 10px; /* Adjust for spacing */
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;  
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a {
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: 50px;  
+            margin-right: 10px;
+            border-radius: 50%; 
+            border: 3px solid #f2a365; 
+            padding: 5px; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        .logo:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;  
+            position: absolute;
+            top: 100%;  
+            left: 0;
+            background-color: #1e4d5a; 
+            width: 250px; 
+            border: 1px solid #000000;
+            padding: 15px 0; 
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px; 
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px;
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            height: 4%;
+            bottom: 0;
+        }
+
+        table tr td {
+            border-top: solid 3px;
+            border-top-width: 10px ;
+            border-color: #ff6f00;
+        }
+        body  {
+            color: #c9e8e1;
+        }
+
+        body b {
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        caption {
+            text-align: justify;
+            justify-content: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html#Origin-Chess"> Origin </a></li>
+                        <li> <a href="Origin.html#Renowned-Chess"> Renowned Chess Figures </a></li>
+                        <li> <a href="Origin.html#Technological-Chess"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Rules.html"> RULES ♗ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Rules.html#Board-section"> Board Anatomy </a></li>
+                        <li> <a href="Rules.html#Moving-section"> Moving Pieces </a></li>
+                        <li> <a href="Rules.html#Additional-section"> How to Win/ Additional Rules </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Tactics.html"> TACTICS ♘ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Tactics.html#Opening-section"> Openings </a></li>
+                        <li> <a href="Tactics.html#Endgame-section"> End Game </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Popularity.html"> POPULARITY ♙ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Popularity.html#World-Impact"> World Impact </a></li>
+                        <li> <a href="Popularity.html#Popular-Media"> Popular Media </a></li>
+                        <li> <a href="Popularity.html#Competitive-Chess"> Competitive Chess </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <head>
+        <title>HISTORY</title>
+    </head>
+    <body>
+    
+    <h1><center id="Origin-Chess"> Origin of Chess </h1><br></center>
+    <center><caption>Chess originated in <b>India</b> around the 6th century as a game called <b>Chaturanga</b>, which represented the <b> four branches of the military </b>: 
+        infantry, cavalry, elephants, and chariots. It spread to <b>Persia</b>, where it evolved into Shatranj, introducing key terms like <b>"Shah" king and "checkmate."</b> 
+        From there, the game moved into the Islamic world, where scholars further developed its rules and strategy, making it a symbol of <b>Intellectual Pursuit</b>. 
+        By the 9th to 11th centuries, chess reached Europe, where it underwent significant changes, including the introduction of the modern queen and bishop. 
+        Chess was <b>standardized in the 19th century</b>, leading to the <b>first World Chess Championship in 1886</b>, and has since become a global intellectual and competitive pursuit.
+    </caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/NiranjanNavalgund/phpbNZjGw.jpeg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b> Before Chess it was Chaturanga </b></center>
+                <details>
+                    <p>Chaturanga, originating in <b>ancient India around the 6th century</b> where the game was played on an <b>8x8 board</b>, 
+                        and its pieces represented the military divisions of the time these are infantry, cavalry, elephants, and chariots. 
+                        It was not just a game but a strategic tool that reflected the importance of military tactics and battlefield formations. 
+                        Played by nobility and scholars, Chaturanga was an intellectual pursuit that mirrored the ancient Indian society's focus on warfare, 
+                        wisdom, and strategic thought. The game gradually spread across regions, evolving through Persia into the game of Shatranj, and then 
+                        into the chess we recognize today.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://i.pinimg.com/originals/d6/cb/51/d6cb51917228eb2686faa8ce5c052f74.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Modern Chess</b></center>
+                <details>
+                    <p><b>Modern chess is a highly intellectual</b>, competitive game that has evolved into an internationally recognized sport. 
+                        <b>played on an 8x8 grid</b>, <b>chess is a game of strategy and foresight</b> where two players control an army of 16 pieces each, with the 
+                        ultimate goal of checkmating the opponent's king. <b>Today's chess tournaments are broadcast globally</b>, with players using a blend of 
+                        deep calculation, pattern recognition, and strategic planning. The game has adapted with technology, with online platforms offering 
+                        real-time matches and analysis, making it more accessible and inclusive. Chess now serves as a symbol of intellectual prowess, attracting 
+                        a global audience from casual enthusiasts to elite grandmasters.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <h1><center id="Renowned-Chess">Renowned Chess Figures</h1><br></center>
+    <center><caption>Renowned Chess Figures Renowned chess figures are extraordinary individuals whose contributions, skills, and achievements have profoundly 
+        shaped the history and evolution of chess. These figures are celebrated not only for their unmatched abilities on the chessboard but also for their lasting 
+        influence on the game's culture and its global recognition. They inspire players and enthusiasts across generations, breaking barriers, setting records, and 
+        demonstrating the intellectual depth and artistry of chess.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://www.capakaspa.info/wp-content/uploads/2016/04/garry-kasparov-04-1024x639.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Garry Kasparov</b></center>
+                <details>
+                    <p> <b>Garry Kasparov</b>, born in 1963 in Baku, Azerbaijan, is widely recognized as one of the greatest chess players in history. In 1985, at just 22 years old, he became the youngest World Chess Champion and retained the title for an impressive 15 years. Renowned for his intense competitive drive, meticulous preparation, and mastery of opening strategies, Kasparov's dynamic and aggressive playing style made him a dominant force in chess throughout the late 20th century.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/php4j0rdV.png" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Magnus Carlsen</b></center>
+                <details>
+                    <p> <b>Magnus Carlsen</b>, born in Norway in 1990, is widely regarded as one of the most versatile and dominant chess players in history. Known as the "Mozart of Chess," Carlsen achieved the title of Grandmaster at just 13 years old. His intuitive gameplay, exceptional endgame skills, and ability to outthink opponents in complex positions have earned him the highest-ever Elo rating of 2882. Carlsen has been the World Chess Champion since 2013 and is known for his relentless determination, creativity, and innovative preparation methods.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <h1><center id="Technological-Chess">Technological Evolution of Chess</h1><br></center>
+    <center><caption>Technology has completely changed the way chess is played and enjoyed, moving it from traditional board games to a global, digital experience. Tools like online platforms, chess engines, and AI have made it easier for players to compete, improve, and study the game, no matter their skill level. These advancements have opened up chess to millions of people worldwide, helping players learn and explore strategies like never before. Technology has also made chess more exciting for spectators, with live game analysis, interactive visuals, and expert commentary bringing matches to life. It’s a perfect blend of tradition and innovation, making chess more accessible and engaging for everyone.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpGpMQT9.png" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Chess Engines</b></center>
+                <details>
+                    <p>Chess engines like <b>Stockfish and AlphaZero</b> have completely changed how players study and prepare for games. These programs use advanced algorithms to analyze millions of positions in seconds, providing insights that even top players rely on. AlphaZero, created by DeepMind, took things to the next level by teaching itself chess through machine learning. It introduced creative strategies and playing styles that have transformed how people understand the game.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center> <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/NathanielGreen/phpoO7vGn.png" width="300" height="300"></center>
+            </td>
+            <td width="50%">
+                <center><b>Online Chess Platforms</b></center>
+                <details>
+                    <p>Online platforms like <b>chess.com, Lichess, and Playchess</b> have made chess accessible to anyone with an internet connection. These sites offer a wide range of features, including real-time matches, tournaments, training exercises, and fun puzzles. Players from all over the world can compete, no matter their skill level, making chess more inclusive and helping to build a vibrant online chess community.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    </body>
+
+    <footer>
+        <p>2024 Chess².com - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

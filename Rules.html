@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title> CHESS² </title>
+
+    <style>
+        body, h1 {
+            font-family: 'Century Gothic';
+        }
+
+        h1{
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            font-size: 40px; /* Increased font size */
+            font-weight: bold;
+            letter-spacing: 3px; /* Adjust letter spacing */
+            text-transform: uppercase; /* Make the title uppercase */
+            color: #f2a365; /* A contrasting color to make it stand out */
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+            margin-left: 10px; /* Adjust for spacing */
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;  
+            padding: 0;
+            background-color: #152c35;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f2a365, #1e4d5a, #f2a365);
+            color: #c9e8e1;
+            padding: 0px 0;
+            justify-content: center;
+        }
+
+        .Web-Title a {
+            text-decoration: none;
+            color: #f2a365;
+            font-size: 35px;
+        }
+
+        .Web-Title:hover {
+            transform: scale(1.1); /* Slightly enlarge logo on hover */
+            text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: 50px;  
+            margin-right: 10px;
+            border-radius: 50%; 
+            border: 3px solid #f2a365; 
+            padding: 5px; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        .logo:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #152c35;
+            border-top: 2px solid #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #c9e8e1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+            transition: background-color 1s ease, color 0.3s ease;
+        }
+
+        .dropdown_menu {
+            display: none;  
+            position: absolute;
+            top: 100%;  
+            left: 0;
+            background-color: #1e4d5a; 
+            width: 250px; 
+            border: 1px solid #000000;
+            padding: 15px 0; 
+            border-radius: 5px;
+            text-decoration: underline rgb(235, 181, 142);
+        }
+
+        .dropdown_menu ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .dropdown_menu ul li {
+            width: 100%;
+            padding: 15px 20px; 
+        }
+
+        .dropdown_menu ul li a {
+            color: #c9e8e1;
+            font-size: 15px;
+        }
+
+        .dropdown_menu ul li a:hover {
+            background-color: #000000;
+            color: #f2a365;
+        }
+
+        .navbar li:hover .dropdown_menu {
+            display: block;
+        }
+
+        footer {
+            background-color: #1e4d5a;
+            text-align: center;
+            padding: 1px;
+            color: #c9e8e1;
+            position: fixed;
+            width: 100%;
+            height: 4%;
+            bottom: 0;
+        }
+
+        table tr td {
+            border-top: solid 3px;
+            border-top-width: 10px ;
+            border-color: #ff6f00;
+        }
+
+        body  {
+            color: #c9e8e1;
+        }
+
+        body b {
+            color: #f2a365;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="WEBSITE PROJECT/logo.jpg" alt="Chess Logo" class="logo">
+            <h1 class="Web-Title"> <a href="Homepage.html">CHESS².com </a></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="About-us.html"> ABOUT US ♔</a></li>
+            <li> <a href="Contact-info.html"> CONTACT INFO ♕ </a></li>
+            <li> <a href="Origin.html"> HISTORY ♖ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Origin.html#Origin-Chess"> Origin </a></li>
+                        <li> <a href="Origin.html#Renowned-Chess"> Renowned Chess Figures </a></li>
+                        <li> <a href="Origin.html#Technological-Chess"> Technological Revolution </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Rules.html"> RULES ♗ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Rules.html#Board-section"> Board Anatomy </a></li>
+                        <li> <a href="Rules.html#Moving-section"> Moving Pieces </a></li>
+                        <li> <a href="Rules.html#Additional-section"> How to Win/ Additional Rules </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Tactics.html"> TACTICS ♘ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Tactics.html#Opening-section"> Openings </a></li>
+                        <li> <a href="Tactics.html#Endgame-section"> End Game </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="Popularity.html"> POPULARITY ♙ ⬇ </a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li> <a href="Popularity.html#World-Impact"> World Impact </a></li>
+                        <li> <a href="Popularity.html#Popular-Media"> Popular Media </a></li>
+                        <li> <a href="Popularity.html#Competitive-Chess"> Competitive Chess </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <head>
+        <title>Popularity</title>
+    </head>
+    <body>
+    
+    <h1><center id="Board-section">BOARD ANATOMY</h1><br></center>
+    <center><caption><p>In this section you will get to learn how to <b>play</b>, the <b>Rules</b> and <b>how to move the pieces</b> in Chess.</p></caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/02/10/56/50/1000_F_210565052_a3b0WiPCcMwRgAjsiQUcxB1bBqIQ7uKY.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>BOARD ANATOMY (Tiles, Ranks & Files)</b></center>
+                <details>
+                    <p>A Chessboard consists of approximately <b>64 squares</b>, made up with an 8X8 Grid. It alternates colors for distinction. 
+                    <b>Files</b> are vertical columns numbered 1-8, while <b>Ranks</b> are horizontal rows labeled from A-H. In the given picture, 
+                    we can determine a piece's position by combining the letter and the number, giving us positions like A8, H1, B2, etc.
+                    </p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/05/78/29/62/1000_F_578296294_0kCeG7WrEO5C82jY3FHxc1ubQxF3gvmy.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>BOARD ANATOMY (POSITIONING)</b></center>
+                <details>
+                    <p>It is important to note that the white pieces are placed in <b>1st and 2nd Ranks</b>,
+                    while the black pieces are placed in 7th and 8th Ranks. The term king's side
+                    refers to E-H files, while queen's side refers to A-D files. If there are no labels
+                    and numbers on the chessboard, remember to have a light square at the 
+                    right-hand corner.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <h1><center id="Moving-section">Moving Pieces</h1><br></center>
+    <center><caption>In this section you will learn about the different chess board <b>Pieces</b> and <b>How they move</b></caption></center>
+    <br><br>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/08/50/76/60/1000_F_850766060_yCnXq7HrRdNKRbTMbxrkUqdhu8WGAq2S.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>King</b></center>
+                <details>
+                    <p>The <b>King</b> is the most important piece, determining your chance of winning
+                    or losing. It has a cross on its top and moves one square in any direction,
+                    whether vertical, horizontal, or diagonal. It is a highly valued piece typically
+                    inactive in the game until much later to protect it from Checkmate,
+                    which ends the game.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/06/61/80/40/1000_F_661804034_dF6u0E4Kcs6Ihq9njxamOao3BaGRqu3A.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Queen</b></center>
+                <details>
+                    <p>The <b>Queen</b> is considered as the most powerful piece. It appears as a 
+                    crown-like piece that has the capability to move multiple squares in any
+                    direction, whether vertical, horizontal, or diagonal. It is valued
+                    highly with 9 points, making it a crucial part of the game.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/01/23/34/94/1000_F_123349410_QfT6BI7aitamBb4Yx183crz8xFc9zmcG.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Rook</b></center>
+                <details>
+                    <p>The <b>Rook</b> appears to have a fortress-like top and moves in multiple squares
+                    vertically or horizontally It is valued with 5 points and typically becomes active
+                    during endgame. It can also protect the king by Castling, moving the king two 
+                    squares away, then putting the rook beside the king.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/08/10/77/18/1000_F_810771813_oBwapaHGsylP7DqwvrnUgRWrz1HEUSnU.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Bishop</b></center>
+                <details>
+                    <p>The <b>Bishop</b> appears to have a cross in its cap, and moves in multiple
+                    squares diagonally. It is valued with 3 points and typically becomes
+                    active early in the game.</p> 
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/08/76/11/65/1000_F_876116522_8ZaddTAde5CMfe5JkbLmpuJo5eGSuMwD.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Knight</b></center>
+                <details>
+                    <p>The <b>knight</b> appears as a horse and moves in an L-like position.
+                    Two squares straight, then turning to one square. It is valued 
+                    with 3 points, and the only piece in the game that can jump 
+                    over pieces, which makes it a piece you can move at the
+                    very start of the game.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/08/71/58/51/1000_F_871585109_eF1BtQVVa4aCH9Nz2KFGD8Lvr0B5ANyy.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Pawn</b></center>
+                <details>
+                    <p><b>Pawns</b> fill the second row, covering the other pieces and can be moved one
+                    square, or two squares forward, but in the corresponding moves,
+                    only one square forward. It captures diagonally. It is the least
+                    valued with 1 point, but when promoted (moving pawn to 
+                    other side of the chessboard), it becomes important.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+    <h1><center id="Additional-section">How to Win/Additional Rules</h1><br></center>
+    <center><caption>Create the <b>Create the right moves</b> and understand the <b>Addition Rules</b> to win the game.</caption></center>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/04/29/98/02/1000_F_429980259_3jA8o7Zw4UVIRrWQxRKf3sZrnQTIX4ZR.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Checkmate</b></center>
+                <details>
+                    <p>win the game, a player must <b>Checkmate</b> the opponent, and is referred as the 
+                    King in Check (having a piece pointed directly at the king, with the king needed 
+                    to be protected), with no possible moves. To get out of a Check, player needs to
+                    either move the king, block the check, or to capture the piece that made the
+                    check possible.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/10/20/49/27/1000_F_1020492748_pOX95hUajd3V3LRbUNSKeDkFaic2mQ7C.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>En Passant</b></center>
+                <details>
+                    <p><b>En Passant</b> is a special pawn move where if the pawn moves two square and it
+                    lands beside the opponent's pawn, the opponent can capture the pawn 
+                    diagonally, in this case, the black pawn captures the white pawn. This
+                    move must be made immediately after the two-square pawn move.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/10/47/95/67/1000_F_1047956714_Rsbe8xJcAqGDCPIbz0zO0Ms7OeQUllJg.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>50 Move Rule</b></center>
+                <details>
+                    <p>The <b>50 move rule</b> is a chess rule which concludes in a draw between players
+                    making 50 consecutive moves without any pawn move or a capture.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/00/86/71/25/1000_F_86712588_V86yfUGzk9uBmKynSDacvFUPXraqzqKK.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>3-Fold Repetition Rule</b></center>
+                <details>
+                    <p>The <b>3-fold repetition rule</b> is a chess rule which also concludes in a draw 
+                    if players make the same moves repeatedly at least 3 times.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as1.ftcdn.net/v2/jpg/08/68/76/56/1000_F_868765636_161UXixc5ylwGr8l4ylbqN2pKsVOfymp.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Insufficient Material</b></center>
+                <details>
+                    <p><b>Insufficient Material</b> in chess also concludes in a draw because of the
+                    inability to checkmate the opponent's king with the remaining pieces.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/10/84/23/85/1000_F_1084238540_xQzSyQHiDTRtULZZvb5JeqxSSoXSXS9a.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Stalemate</b></center>
+                <details>
+                    <p><b>Stalemate</b> happens when player has no legal moves,
+                    while their king is not in check, resulting in a draw.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%">
+                <center><img src="https://as2.ftcdn.net/v2/jpg/10/88/93/95/1000_F_1088939568_8sHInQvj7fINMkyErAoSDzjnStB1LrR5.jpg" width="400" height="400"></center>
+            </td>
+            <td width="50%">
+                <center><b>Touch-Move Rule</b></center>
+                <details>
+                    <p>The <b>Touch-move rule</b> is characterized by players not being able to touch their 
+                    pieces and move it somewhere, but returning it to the old position. They must
+                    move it where they want it to land, and touching an opponent's piece would
+                    mean the player must capture that exact piece.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+    </body>
+    <footer>
+        <p>2024 Chess².com - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
